@@ -1,22 +1,31 @@
-name: Update apps.json weekly
+name: Update apps.json weekly with Puppeteer
 
 on:
   schedule:
-    - cron: "0 0 * * 0"  # 每周日 00:00 UTC 触发
-  workflow_dispatch:
+    - cron: "0 0 * * 0"  # 每周日 UTC 时间 00:00 执行一次
+  workflow_dispatch:      # 支持手动触发
 
 jobs:
-  build:
+  update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: npm install axios cheerio
-      - run: node scrape-apps.js
-      - run: git config user.name github-actions
-      - run: git config user.email github-actions@github.com
-      - run: git add apps.json
-      - run: git commit -m "update apps.json" || echo "No changes"
-      - run: git push
+
+      - name: Install Puppeteer
+        run: npm install puppeteer
+
+      - name: Run Puppeteer script
+        run: node scrape-apps-puppeteer.js
+
+      - name: Commit changes
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add apps.json
+          git commit -m "Auto update apps.json via Puppeteer" || echo "No changes"
+          git push
