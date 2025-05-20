@@ -16,7 +16,7 @@ const stopwords = ["product", "products", "options", "option", "custom", "produc
   for (const url of categories) {
     for (let pageNum = 1; pageNum <= 10; pageNum++) {
       await page.goto(`${url}?page=${pageNum}`, { waitUntil: "networkidle2" });
-      await page.waitForTimeout(1500);
+      await new Promise(r => setTimeout(r, 1500)); // 修复兼容性问题
 
       const result = await page.evaluate(() => {
         const cards = Array.from(document.querySelectorAll("[data-app-card]"));
