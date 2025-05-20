@@ -53,7 +53,7 @@ async function autoScroll(page) {
       console.log("Visiting", fullUrl);
       await page.goto(fullUrl, { waitUntil: "networkidle2", timeout: 60000 });
       await autoScroll(page);
-      await page.waitForTimeout(1000);
+      await new Promise(r => setTimeout(r, 1000));
 
       const result = await page.evaluate(() => {
         const cards = Array.from(document.querySelectorAll("[data-app-card]"));
