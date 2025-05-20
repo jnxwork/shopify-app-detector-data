@@ -1,1 +1,77 @@
-[]
+[
+  {
+    "slug": "zepto-product-personalizer",
+    "name": "Zepto Product Personalizer",
+    "url": "https://apps.shopify.com/product-personalizer",
+    "icon": "https://cdn.shopify.com/app-store/listing_images/fd844c1132827ea1a49068900fc0e219/icon.png",
+    "keywords": [
+      "zepto",
+      "product-personalizer",
+      "zeptoapps"
+    ]
+  },
+  {
+    "slug": "globo-product-options",
+    "name": "Globo Product Options",
+    "url": "https://apps.shopify.com/globo-product-options",
+    "icon": "https://cdn.shopify.com/app-store/listing_images/8b8c1e21a3aabfbafc51549186791e35/icon.png",
+    "keywords": [
+      "globo",
+      "globoapps",
+      "product-options"
+    ]
+  },
+  {
+    "slug": "kickflip-product-configurators",
+    "name": "Kickflip Product Configurators",
+    "url": "https://apps.shopify.com/kickflip-product-configurators",
+    "icon": "https://cdn.shopify.com/app-store/listing_images/0eecee8c6348f75be36c8bc5de070499/icon.png",
+    "keywords": [
+      "kickflip",
+      "product-configurators"
+    ]
+  },
+  {
+    "slug": "infinite-options",
+    "name": "Infinite Product Options",
+    "url": "https://apps.shopify.com/custom-options",
+    "icon": "https://cdn.shopify.com/app-store/listing_images/2b62b33de29bb0e86db7811c23e330cb/icon.png",
+    "keywords": [
+      "infinite",
+      "custom-options",
+      "hulkapps"
+    ]
+  },
+  {
+    "slug": "easify-product-options",
+    "name": "Easify Product Options",
+    "url": "https://apps.shopify.com/easify-product-options",
+    "icon": "https://cdn.shopify.com/app-store/listing_images/e2f42f69a5932f4a1179ac0d0bd0c764/icon.png",
+    "keywords": [
+      "easify",
+      "product-options"
+    ]
+  },
+  {
+    "slug": "bold-product-options",
+    "name": "Bold Product Options",
+    "url": "https://apps.shopify.com/product-options",
+    "icon": "https://cdn.shopify.com/app-store/listing_images/7fa62436cfb81fce72ac46a63ec8aafd/icon.png",
+    "keywords": [
+      "bold",
+      "boldapps",
+      "product-options"
+    ]
+  },
+  {
+    "slug": "customily",
+    "name": "Customily Product Personalizer",
+    "url": "https://apps.shopify.com/customily-product-personalizer",
+    "icon": "https://cdn.shopify.com/app-store/listing_images/7ab8d98d7b1310937eabe78877e2393b/icon.png",
+    "keywords": [
+      "customily",
+      "product-personalizer",
+      "cdn.customily.com"
+    ]
+  }
+]
