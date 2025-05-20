@@ -1,0 +1,22 @@
+name: Update apps.json weekly
+
+on:
+  schedule:
+    - cron: "0 0 * * 0"  # 每周日 00:00 UTC 触发
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm install axios cheerio
+      - run: node scrape-apps.js
+      - run: git config user.name github-actions
+      - run: git config user.email github-actions@github.com
+      - run: git add apps.json
+      - run: git commit -m "update apps.json" || echo "No changes"
+      - run: git push
