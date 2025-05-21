@@ -20,7 +20,7 @@ def extract_keywords(slug, icon_url):
 def fetch_and_parse(url):
     print(f"📥 Fetching: {url}")
     try:
-        resp = httpx.get(WORKER_PROXY, params={"url": url}, timeout=30)
+        resp = httpx.get(WORKER_PROXY, params={"url": url}, timeout=30, verify=False)
         soup = BeautifulSoup(resp.text, "html.parser")
         return soup.select("[data-app-card]")
     except Exception as e:
