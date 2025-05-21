@@ -1,6 +1,6 @@
 # scrape_apps_worker.py
 import json
-import requests
+import httpx
 from bs4 import BeautifulSoup
 
 CATEGORIES = [
@@ -20,7 +20,7 @@ def extract_keywords(slug, icon_url):
 def fetch_and_parse(url):
     print(f"📥 Fetching: {url}")
     try:
-        resp = requests.get(WORKER_PROXY, params={"url": url}, timeout=30)
+        resp = httpx.get(WORKER_PROXY, params={"url": url}, timeout=30)
         soup = BeautifulSoup(resp.text, "html.parser")
         return soup.select("[data-app-card]")
     except Exception as e:
